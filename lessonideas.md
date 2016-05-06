@@ -64,4 +64,10 @@
 		* Teaspoon (for rails)
 		* Capybara / Cucumber
 	* Jasmine, Mocha 
-
+* Cover current events related to technology
+	* security
+	* politics
+	* society
+	* business (?)
+	* follow developements in significant projects
+	* emerging technologies/projects
