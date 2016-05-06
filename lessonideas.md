@@ -35,6 +35,8 @@
 	* Prolog
 	* Haskell
 	* Elixer
+	* Golang
+	* C#
 * Bad things
 	* Coffeescript
 	* Haml	
