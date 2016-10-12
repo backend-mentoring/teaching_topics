@@ -82,9 +82,11 @@ Secure Shell (SSH) is a cryptographic network protocol for operating network ser
 - `man ssh-keygen`
 - `man ssh-copy-id`
 - `man ssh_config`
+- [Search Hacker News for SSH](https://hn.algolia.com/?query=ssh)
+- [Simplify Your Life With an SSH Config File](http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/)
 - [Upcase Intro to SSH](https://thoughtbot.com/upcase/videos/intro-to-ssh)
+- [gitolite advanced ssh usage](http://gitolite.com/gitolite/ssh.html)
 - [wikipedia ssh](https://en.wikipedia.org/wiki/Secure_Shell)
 - [wikipedia OpenSSH](https://en.wikipedia.org/wiki/OpenSSH)
 - [wikipedia PuTTY](https://en.wikipedia.org/wiki/PuTTY)
-- [gitolite ssh](http://gitolite.com/gitolite/ssh.html)
 
