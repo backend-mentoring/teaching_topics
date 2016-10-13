@@ -1,5 +1,32 @@
 # SSH Workshop
 
+### addstudent
+
+To add a student user, run:
+
+```
+> sudo addstudent username
+[...]
+created student with password username:initialpassword
+>
+```
+
+This will create an unprivileged user with CPU, RAM, and Disk limits.
+
+The initial password is immediately expired, requiring the student to set their own when they first ssh.
+
+### delstudent
+
+To remove a student user, run:
+
+```
+> sudo delstudent user
+```
+
+This will remove their home directory and disk quota.
+
+Warning: any files they created outside of their home directory will continue to exist.
+
 ### remember
 
 - keep track of time
