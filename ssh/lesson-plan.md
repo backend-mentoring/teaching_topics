@@ -77,7 +77,7 @@ Secure Shell (SSH) is a cryptographic network protocol for operating network ser
   ```
 
   - `ls ~/.ssh` notice the two files
-  - `cat `~/.ssh/keyname``.pub`
+  - `cat ~/.ssh/keyname``.pub`
   - the private key (no pub) should never ever leave your computer (never be written over a network)
   - its secrecy is the only thing that mathematically proves the authenticity of the public key
 
