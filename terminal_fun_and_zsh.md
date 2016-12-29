@@ -20,7 +20,7 @@ Use `>` to put output into a file
 
 `^foo^bar` replaces foo with bar in the  last command
 
-`tree`
+`tree -I node_modules`
 
 `Cmd+k / clear`
 
@@ -28,7 +28,7 @@ Use `>` to put output into a file
 
 `find`
 
-`sudo` insluts
+`sudo` insults
 
 
 the ‘grep‘ command searches the given file for lines containing a match to the given strings or words. Search ‘/etc/hosts for ‘dude‘ 
