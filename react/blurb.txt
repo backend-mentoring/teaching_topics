@@ -1,0 +1,9 @@
+No Magic React
+
+The modern javascript stack is a point of contention for many web developers,
+both new and experienced. It introduces a long list of frequently changing tools
+that seem to melt into each other in inexplicable ways. We're going to demystify
+react by building a site with nothing but react. This way will help us
+understand the role it plays, and how it can be effectively complemented by
+other modern tools.
+
