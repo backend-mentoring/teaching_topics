@@ -4,16 +4,17 @@ Typing helps wear out the magic. Learn this by doing it yourself.
 
 We'll be interacting directly with `ReactDOM` and `React`, so don't hesitate to consult the [documentation](https://facebook.github.io/react/docs/react-api.html).
 
-1. ...
+1. create a project directory
 
    ```sh
-   mkdir js
+   cd wherever/you/like/to/code
+   mkdir no-magic
+   cd no-magic
    ```
 
 2. grab `react.min.js` and `react-dom.min.js`
 
     ```sh
-    cd js
     wget --https-only https://unpkg.com/react@15/dist/react.min.js
     wget --https-only https://unpkg.com/react-dom@15/dist/react-dom.min.js
     ```
@@ -28,10 +29,6 @@ We'll be interacting directly with `ReactDOM` and `React`, so don't hesitate to 
 
 4. create an unmagical `index.html`
 
-    ```sh
-    cd ..
-    ```
-
     ```html
     <!DOCTYPE html>
     <html>
@@ -41,9 +38,9 @@ We'll be interacting directly with `ReactDOM` and `React`, so don't hesitate to 
     </head>
     <body>
       <div id="root"></div>
-      <script src="/js/react.min.js"></script>
-      <script src="/js/react-dom.min.js"></script>
-      <script src="/js/script.js"></script>
+      <script src="/react.min.js"></script>
+      <script src="/react-dom.min.js"></script>
+      <script src="/script.js"></script>
     </body>
     ```
 
@@ -69,16 +66,10 @@ ReactDOM.render(
 |[React.createElement](https://facebook.github.io/react/docs/react-api.html#createelement)|element|Create and return a new React element of the given type|
 |[document.getElementById](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)|container|Returns a reference to the element by its ID|
 
-## too much typing makes the baby go blind
-
-Give `React.createElement` a short name like `c`.
+## we can type less
 
 ```javascript
 var c = React.createElement;
-
-ReactDOM.render(
-  c('h1', null, 'Hello, World!'),
-  document.getElementById('root'));
 ```
 
 Using 2-space indentation and a single letter abbreviation makes nested elements indent properly - [source](https://github.com/ustun/react-without-jsx).
@@ -93,7 +84,7 @@ c('div', null,
   c('p', null, '...But back to the story!'))
 ```
 
-## play with the state
+## componenets and state
 
 Let's add a `Counter` component to `script.js`:
 
@@ -125,28 +116,27 @@ var Counter = React.createClass({
 
 });
 
-var helloCounter = (
-  c('div', null,
-    c('h1', null, 'Hello, World!'),
-    c(Counter, null))
-);
-
 ReactDOM.render(
-  helloCounter,
+  c(Counter, null),
   document.getElementById('root'));
 
 ```
 
-## notice
+## interesting bits?
+
+props are simply passed as an object in the second argument
 
 ```javascript
-var Counter = React.createClass({ ... });
+c('button', { onClick: this.countBy.bind(this, 1) }, 'up')
 ```
-**and**
+
+components can be created using the type
 
 ```javascript
 c(Counter, null)
 ```
+
+RTFM
 
 - [React.createClass](https://facebook.github.io/react/docs/react-api.html#createclass)
 - [React Without ES6](https://facebook.github.io/react/docs/react-without-es6.html)
