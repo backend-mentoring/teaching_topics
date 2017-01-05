@@ -66,6 +66,14 @@ ReactDOM.render(
 |[React.createElement](https://facebook.github.io/react/docs/react-api.html#createelement)|element|Create and return a new React element of the given type|
 |[document.getElementById](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)|container|Returns a reference to the element by its ID|
 
+```
+React.createElement(
+  type,
+  [props],
+  [...children]
+)
+```
+
 ## we can type less
 
 ```javascript
@@ -86,7 +94,7 @@ c('div', null,
 
 ## componenets and state
 
-Let's add a `Counter` component to `script.js`:
+Let's add a `Counter` component to `script.js` using [React.createClass](https://facebook.github.io/react/docs/react-api.html#createclass):
 
 ```javascript
 var c = React.createElement;
@@ -124,20 +132,23 @@ ReactDOM.render(
 
 ## interesting bits?
 
-props are simply passed as an object in the second argument
+> With React.createClass(), you have to provide a separate getInitialState method that returns the initial state:
+
+```javascript
+getInitialState: function () {
+  return { count: 0 };
+}
+```
+
+> props...
 
 ```javascript
 c('button', { onClick: this.countBy.bind(this, 1) }, 'up')
 ```
 
-components can be created using the type
+> The type argument can be either a tag name string (such as 'div' or 'span'), or a React component type (a class or a function).
 
 ```javascript
 c(Counter, null)
 ```
-
-RTFM
-
-- [React.createClass](https://facebook.github.io/react/docs/react-api.html#createclass)
-- [React Without ES6](https://facebook.github.io/react/docs/react-without-es6.html)
 
