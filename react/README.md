@@ -15,8 +15,8 @@ We'll be interacting directly with `ReactDOM` and `React`, so don't hesitate to 
 2. grab `react.min.js` and `react-dom.min.js`
 
     ```sh
-    curl https://unpkg.com/react@15/dist/react.min.js -o "react.min.js"
-    curl https://unpkg.com/react-dom@15/dist/react-dom.min.js -o "react-dom.min.js"
+    curl https://unpkg.com/react@15/dist/react.min.js -Lo "react.min.js"
+    curl https://unpkg.com/react-dom@15/dist/react-dom.min.js -Lo "react-dom.min.js"
     ```
 
 3. create an unmagical `script.js`
