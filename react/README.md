@@ -152,3 +152,20 @@ c('button', { onClick: this.countBy.bind(this, 1) }, 'up')
 c(Counter, null)
 ```
 
+## create-react-app: under the hood
+
+```sh
+# create and eject an app
+create-react-app everything-is-on-fire
+cd everything-is-on-fire
+npm run eject
+
+echo "a fresh create-react-app depends on $(ls node_modules | wc -l) modules"
+echo "the ejected app has this file structure..."
+tree -I node_modules
+
+# do some exploring...
+
+cd ..
+rm -rf everything-is-on-fire
+```
