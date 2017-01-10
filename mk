@@ -2,16 +2,25 @@
 
 set -e
 
-NAME=$1
-TITLE=$2
+NAME="$1"
 
-if [ -z $NAME ]; then
-  echo "makes a workshop:  ./mk <name> [<title>]"
+if [ -z $NAME ] || [ "$NAME" = "-h" ] || [ "$NAME" = "--help" ]; then
+  echo
+  echo "Makes a workshop directory with default files."
+  echo
+  echo "Usage:"
+  echo "  ./mk <name> [<title>]"
+  echo "  ./mk -h | --help"
+  echo
   exit 1
 fi
 
+# done below [ -z $NAME ] to make sure the shift is safe
+shift
+TITLE="$*"
+
 if [ -e $NAME ]; then
-  echo "warning: file or directory already exists"
+  echo "Error: workshop directory already exists."
   exit 1
 fi
 
@@ -26,5 +35,6 @@ else
   echo "# $TITLE" > "$NAME/README.md"
 fi
 
-echo "ready"
+echo "Ready."
+tree --noreport "$NAME"
 
