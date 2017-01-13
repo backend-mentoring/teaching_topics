@@ -12,3 +12,15 @@ This week we'll present some advanced git features, as well as explore higher le
 
 We'll prompt you to think about your own experience with git, and discover the workflow that works for you. 
 
+---
+
+Git Foundations
+
+The first hour will be dedicated to your personal challenges and interests. Vincent and Allon will be available to offer their guidance on whatever aspect of development you are facing.
+
+> git add .
+> git commit -m 'stuff'
+> # we can do better than that...
+
+Hour number two will be dedicated to mastering git through foundational understanding and good habit. We'll be looking at how git is best used individually and collaboratively to prepare you for coding in a professional environment.
+
