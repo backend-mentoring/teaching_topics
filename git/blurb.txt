@@ -1,0 +1,14 @@
+Shell Hacks: Git
+
+This week we'll present some advanced git features, as well as explore higher level patterns of use that can turn git into a streamlined part of your development process. The workshop should address scenarios you may have already found your self in:
+
+  - (insert favorite profanity here), that last commit wasn't quite right.
+  - Merge conflicts...
+  - I want to explore an alternative to the most recent changes in my working directory without throwing them out.
+  - I've lost track of what's happened in the last couple hours of coding.
+  - Something about my most recent changes no longer works. What could it be?
+  - How do I work cleanly with other developers?
+  - What should be committed, what should be ignored, why?
+
+We'll prompt you to think about your own experience with git, and discover the workflow that works for you. 
+
