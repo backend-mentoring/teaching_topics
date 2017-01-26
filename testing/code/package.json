@@ -1,0 +1,12 @@
+{
+  "name": "testing",
+  "description": "an example of testing in javascript",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter min --watch test"
+  },
+  "license": "WTFPL",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
