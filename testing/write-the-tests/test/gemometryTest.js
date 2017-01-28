@@ -1,6 +1,6 @@
 const { assert, expect } = require('chai');
 
-var geometry = require('../geometry');
+const geometry = require('../geometry');
 
 describe('geometry', () => {
 
@@ -8,6 +8,13 @@ describe('geometry', () => {
     expect(geometry).to.exist;
   });
 
+  describe('all triangles', () =>{
+
+  })
+
+  describe('right triangles', () =>{
+
+  })
 
 
 });
