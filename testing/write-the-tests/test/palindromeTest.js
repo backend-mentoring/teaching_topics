@@ -1,12 +1,12 @@
-var assert = require('chai').assert;
-var expect = require('chai').expect;
+const { assert, expect}  = require('chai');
 
-var isPalindrome = require('../isPalindrome');
+const isPalindrome = require('../isPalindrome');
 
 describe('isPalindrome', () => {
   it('should exist', () => {
     expect(isPalindrome).to.exist;
   });
+
 
 
 

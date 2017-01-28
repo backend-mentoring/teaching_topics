@@ -1,6 +1,7 @@
+
 const isPalindrome = (origWord) => {
-    var inputArray = origWord.split("");
-    var reversed = inputArray.reverse().join("");
+    let inputArray = origWord.split("");
+    let reversed = inputArray.reverse().join("");
   return reversed === origWord;
 }
 
