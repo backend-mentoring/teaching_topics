@@ -7,6 +7,10 @@ describe('eschaton', () => {
     expect(eschaton).to.exist;
   });
 
+
+  // create our beligerents in a before block ( just to get practice )
+  // https://mochajs.org/#hooks
+
   // write a test to make sure that the stronger beligerent wins
 
   // then write the code to make it pass
