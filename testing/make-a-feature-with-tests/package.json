@@ -1,7 +1,7 @@
 {
   "name": "write-the-tests",
   "version": "1.0.0",
-  "description": "This time, i supply working src, you write the specs",
+  "description": "Create a silly game with test driven development",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter min --watch test"
