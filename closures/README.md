@@ -27,7 +27,7 @@ In the words of Dave Thomas:
 
 ---
 
-## Encapsulation
+## closures in action
 
 Encapsulation is an important tool in OOP because it allows us to explicitly
 separate the implementation from the interface.
@@ -60,14 +60,14 @@ dave.greet();
 
 Everything goes south.
 
+---
+
 Now this last example is contrived, and Dave's name change is probably Okay.
 But in real-world code there may be intricate requirements about how internal
 code can be executed, perhaps in specific order, or with arguments that fall in
 an expected range.
 
-With complicated abstractions, clients to your code may not anticipate the
-assumptions imbued in your implementation, and it is wise to encapsulate those
-details.
+With complicated assumptions clients risk misusing the implementation.
 
 More code:
 
@@ -117,7 +117,16 @@ ones.next();
 ```
 
 In the case of `counter` there is an explicit public interface (`next`, `reset`)
-to interact with the internal state of the object, `count`. You can be confident
-that your `counter` will always be used properly, in the way you sanctioned in
-its public interface.
+to interact with the internal state of the object. You can be confident that
+your `counter` will always be used properly, in the ways sanctioned by its
+public interface.
+
+To be clear:
+
+- `reset` is an example of a closure because it encloses over the binding of
+  `count` and `from`
+- `next` is a closure over the bindings of `count` and `to`
+
+Encapsulation is a more abstract concept which can be realized in javascript
+using closures.
 
