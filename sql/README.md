@@ -5,6 +5,20 @@ History / Theory:
 [Relational Database](https://en.wikipedia.org/wiki/Relational_database)
 
 ---
+CRUD for databases:
+
+Create -> INSERT  
+Read -> SELECT  
+Update -> UPDATE  
+Delete -> DELETE
+
+## Most important datatypes
+
+- TEXT = 	Holds a string with a maximum length of 65,535 characters
+- VARCHAR = Holds a variable length string (can contain letters, numbers, and special characters). The maximum size is specified in parenthesis. Can store up to 255 characters. Note: If you put a greater value than 255 it will be converted to a TEXT type
+- INT = integer number, the maximum number of digits may be specified in parenthesis
+- FLOAT = decimal The maximum number of digits may be specified in parenthesis
+
 
 {short} Core Language (leading into orm exercise):
 
