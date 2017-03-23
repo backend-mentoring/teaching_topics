@@ -10,32 +10,32 @@ CREATE TABLE people (
   eye_color TEXT NOT NULL
 );`;
 
-const createTableFriends = `
-CREATE TABLE friends (
+const createTableFriendships = `
+CREATE TABLE friendships (
   id INTEGER PRIMARY KEY ASC,
-  a INTEGER,
-  b INTEGER,
-  FOREIGN KEY(a, b) REFERENCES people(id),
-  CHECK (a < b)
+  person_a INTEGER,
+  person_b INTEGER,
+  FOREIGN KEY(person_a, person_b) REFERENCES people(id),
+  UNIQUE(person_a, person_b),
+  CHECK (person_a < person_b)
 );`;
 
-// callback will receive the Person and Friend class.
+// callback will receive the Person and Friendship class.
 module.exports = function (callback) {
 
   // create the tables, and then define the models.
-  db.run(createTablePeople + createTableFriends, defineModels);
+  db.run(createTablePeople + createTableFriendships, defineModels);
 
   function defineModels() {
 
     class Person {
     }
 
-    class Friend {
+    class Friendship {
     }
 
-    callback({ Person, Friend });
+    callback({ Person, Friendship });
 
   }
 
 };
-
