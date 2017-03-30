@@ -1,6 +1,6 @@
 # Promises
 
-`javascript
+```javascript
 vincentPromiseLesson()
   .then(enjoyLesson)
   .catch(err => allonPromiseLessonPreparedBeforeClass())
@@ -10,4 +10,4 @@ vincentPromiseLesson()
 function enjoyLesson(theLesson) {
   console.log('wow, promises are awesome!');
 }
-`
+```
