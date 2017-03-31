@@ -1,7 +1,7 @@
 console.log('we are runnin...');
 
 document
-  .querySelector('body')
+  .querySelector('html')
   .addEventListener('click', event => {
 
     console.log('A click, a click!');
@@ -22,7 +22,7 @@ document
       .then(filmTitles => { console.log(filmTitles); })
       .catch(err => {
         console.log(`well, I really wanted to see some starwars films, but I guess I'll just have to not... :( ${err}`);
-      })
+      });
   });
 
 console.log('we are really runnin...')
