@@ -1,13 +1,6 @@
 # Promises
+Everybody go here: [https://worst-api-ever.herokuapp.com](https://worst-api-ever.herokuapp.com)
 
-```javascript
-vincentPromiseLesson()
-  .then(enjoyLesson)
-  .catch(err => allonPromiseLessonPreparedBeforeClass())
-  .catch(err => allonIsWritingPromiseJokesBecauseTheLessonIsNotReadyYet())
-  .then(enjoyLesson);
+Now clone this: [https://github.com/trivett/good-consumption-of-a-bad-api](https://github.com/trivett/good-consumption-of-a-bad-api)
 
-function enjoyLesson(theLesson) {
-  console.log('wow, promises are awesome!');
-}
-```
+You know what to do.
