@@ -1,6 +1,6 @@
 from mimetypes import types_map
 from os import mkdir
-from os.path import join
+from os.path import expanduser, join
 
 from scrapy.exceptions import DropItem
 
@@ -22,13 +22,14 @@ class ValidateContentTypePipeline(object):
 
 class FileExporterPipeline(object):
 
+    @classmethod
+    def from_crawler(cls, crawler):
+        export_directory = expanduser(crawler.settings.get('EXPORT_DIRECTORY'))
+        return cls(export_directory=export_directory)
+
     def __init__(self, export_directory):
         self.export_directory = export_directory
         self.created_categories = set()
-
-    @classmethod
-    def from_crawler(cls, crawler):
-        return cls(export_directory=crawler.settings.get('EXPORT_DIRECTORY'))
 
     def open_spider(self, spider):
         # make sure the export directory exists

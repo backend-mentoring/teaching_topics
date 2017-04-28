@@ -9,7 +9,7 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-EXPORT_DIRECTORY = '/home/allon/ubu'
+EXPORT_DIRECTORY = '~/Downloads/ubu'
 
 BOT_NAME = 'ubu'
 
