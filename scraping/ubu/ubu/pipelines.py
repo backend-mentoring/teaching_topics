@@ -28,20 +28,27 @@ class FileExporterPipeline(object):
 
     @classmethod
     def from_crawler(cls, crawler):
-        return cls(
-            export_directory=crawler.settings.get('EXPORT_DIRECTORY'),
-        )
+        return cls(export_directory=crawler.settings.get('EXPORT_DIRECTORY'))
+
+    def open_spider(self, spider):
+        # make sure the export directory exists
+        try:
+            mkdir(self.export_directory)
+        except OSError:
+            pass
 
     def process_item(self, item, spider):
 
         category_directory = join(self.export_directory, item['category'])
 
-        # create a directory for this category
+        # make sure the category directory exists
         if not item['category'] in self.created_categories:
             try:
                 mkdir(category_directory)
-            except FileExistsError:
+                self.created_categories.add(item['category'])
+            except OSError:
                 pass
 
+        # write the item content out to file
         with open(join(category_directory, item['filename']), 'wb') as f:
             f.write(item['content'])
