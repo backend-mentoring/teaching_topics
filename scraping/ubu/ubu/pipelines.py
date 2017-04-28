@@ -4,14 +4,11 @@ from os.path import expanduser, join
 
 from scrapy.exceptions import DropItem
 
+
 MIME_TYPES = set(types_map.values())
 
 
-class UbuPipeline(object):
-    def process_item(self, item, spider):
-        return item
-
-
+# filters out items with a Content Type that is not a valid mime type
 class ValidateContentTypePipeline(object):
 
     def process_item(self, item, spider):
@@ -20,6 +17,7 @@ class ValidateContentTypePipeline(object):
         raise DropItem('Bad Content-Type encountered: %s' % item)
 
 
+# writes item content out to disk
 class FileExporterPipeline(object):
 
     @classmethod
