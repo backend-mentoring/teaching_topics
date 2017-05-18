@@ -1,14 +1,14 @@
 ## Deploying with Docker
 
-#### What is docker?
+### What is docker?
 
 Docker is a software container platform that allows you to run apps side by side. Containers do not run full OS, but instead run a minimal system with libraries and settings required to run your application. Think of containers has containing just enough to make it work.
 
-![VM Architecture](https://www.docker.com/sites/default/files/VM%402x.png)
+![VM Architecture](https://www.docker.com/sites/default/files/VM%402x.png "VMs") ![Docker Architecture](https://www.docker.com/sites/default/files/Container%402x.png "Docker")
 
 Docker gets flack for not being as fast as VMs, and many people question why switch to docker? The reason is resource efficiency. Docker machines unlike VMs, can run any docker container no matter which application it may be. VMs are set up specifically for one type of application and can be scaled per cluster of VMs.
 
-#### Deployment?
+### Deployment?
 
 Docker Toolbox contains tools to coordinate and configure the applications you wish to deploy.
 
@@ -20,7 +20,7 @@ Docker Toolbox contains tools to coordinate and configure the applications you w
 
 
 
-#### Installation
+### Installation
 
 Follow the setup instructions for your OS:
 
@@ -42,7 +42,7 @@ docker-machine -v
 
 
 
-#### Docker and the Dockerfile
+### Docker and the Dockerfile
 
 The dockerfile is the main configuration file for the container that your app will run inside. Dockerfile commands include: 
 
@@ -105,7 +105,7 @@ What happened?
 
 
 
-##### Docker-Compose
+### Docker-Compose
 
 Remember that mongod process thing that we needed to run our application? Well we still need it and we need to connect it to the container running our API.
 
@@ -113,18 +113,18 @@ This is where docker-compose comes in. With compose we can coordinate running co
 
 ###### docker-compose.yml
 
-```yaml
+```
 api:
-	build: .
-	command: npm run start
-	ports:
-		- "3000:3000"
-	links:
-		- db:db
-	environment:
-		- MONGODB_URI=mongodb://db:27017/TodoApp # replaced localhost with db as per link
+  build: .
+  command: npm run start
+  ports:
+    - "3000:3000"
+  links:
+    - db:db
+  environment:
+    - MONGODB_URI=mongodb://db:27017/TodoApp # replaced localhost with db as per link
 db:
-	image: mongo:3.0.2
+  image: mongo:3.0.2
 ```
 
 
