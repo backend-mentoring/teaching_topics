@@ -4,7 +4,9 @@
 
 Docker is a software container platform that allows you to run apps side by side. Containers do not run full OS, but instead run a minimal system with libraries and settings required to run your application. Think of containers has containing just enough to make it work.
 
-![VM Architecture](https://www.docker.com/sites/default/files/VM%402x.png "VMs") ![Docker Architecture](https://www.docker.com/sites/default/files/Container%402x.png "Docker")
+VMs                                                                              | Docker
+:-------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:
+![VM Architecture](https://www.docker.com/sites/default/files/VM%402x.png "VMs") |  ![Docker Architecture](https://www.docker.com/sites/default/files/Container%402x.png "Docker")
 
 Docker gets flack for not being as fast as VMs, and many people question why switch to docker? The reason is resource efficiency. Docker machines unlike VMs, can run any docker container no matter which application it may be. VMs are set up specifically for one type of application and can be scaled per cluster of VMs.
 
