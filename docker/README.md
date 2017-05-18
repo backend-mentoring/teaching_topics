@@ -113,6 +113,9 @@ Remember that mongod process thing that we needed to run our application? Well w
 
 This is where docker-compose comes in. With compose we can coordinate running containers and connect them together. The docker-compose configuration is a YAML file that will also live in the project root. 
 
+In the file we define each service that we want to run. Each service will be spawned in its own container based on a combination of the compose file, and the apps Dockerfile. Let's take a look at some more documentation:
+https://docs.docker.com/compose/compose-file/
+
 ###### docker-compose.yml
 
 ```
@@ -142,3 +145,13 @@ This works for the first run. If we make changes to our source code and want to 
 ```shell
 docker-compose build
 ```
+
+We should now have two running containers with a link to communicate to one another. We just deployed two applications in isolated containers!
+
+To access the application we must first figure out the IP of our local docker-machine
+
+```shell
+docker-machine ip default
+```
+
+Since we opened port 3000 in our container, we can access the application at {DOCKER_MACHINE_IP}:3000/todos
