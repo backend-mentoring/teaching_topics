@@ -61,6 +61,8 @@ The FROM command is very important as it gives us a base image for building our 
 
 https://hub.docker.com/explore/
 
+Todos API finished: https://github.com/trivett/finished-example-todos-api
+
 Let's create the Dockerfile for our TODOS API. Dockerfiles are usually located in the root directory of the application they are containerizing. For our purposes, the dockerfile below is a sufficient start to get it running.
 
 ###### Dockerfile
