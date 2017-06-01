@@ -81,15 +81,15 @@ Let's add the latest version definition to our docker-compose file.
 ```yaml
 version: '2'
 services:
-	api:
-		build: .
-		command: npm run start
-		ports: 
-			- "3000:3000"
-		links:
-			- db:db
-	db:
-		image: mongo:3.0.2
+  api:
+    build: .
+    command: npm run start
+    ports: 
+      - "3000:3000"
+    links:
+      - db:db
+  db:
+    image: mongo:3.0.2
 ```
 
 We now define our db and api under the services key. This is a much better and more explicit definition of our staging environment.
