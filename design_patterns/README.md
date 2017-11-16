@@ -60,20 +60,20 @@ In this example we have a car which is made up of many smaller parts. In this im
 
 ```python
 class Car(object):
-  	def __init__(self, tires, fuel_tank):
+    def __init__(self, tires, fuel_tank):
     	self.tires = tires
         self.fuel_tank = fuel_tank
     
 class Tire(object):
-  	def __init__(self, orientation, pressure):
+    def __init__(self, orientation, pressure):
     	self.orientation = orientation
     	self.pressure = pressure
     
-  	def fill(self, amount):
+    def fill(self, amount):
     	self.pressure = self.pressure + amount
     
 class FuelTank(object):
-  	def __init__(self, level):
+    def __init__(self, level):
       	self.level = level
         
     def fill(self, amount):
@@ -107,14 +107,14 @@ This pattern allows us to create an adapter class for an object that is not comp
 
 ```python
 class Bush(object):
-  	def __init__(self, color):
+    def __init__(self, color):
       	self.color = color
     
     def rustle(self):
       	return 'rustling sound'
         
 class Animal(object):
-  	def __init__(self, species, sound):
+    def __init__(self, species, sound):
       	self.species = species
         self.sound = sound
         
@@ -126,7 +126,7 @@ def click_object(thing):
     
 # adapter class for our incompatible Bush
 class BushAdapter(object):
-  	def __init__(self, bush):
+    def __init__(self, bush):
       	self.bush = bush
     
     def make_sound(self):
