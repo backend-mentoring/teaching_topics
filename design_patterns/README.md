@@ -28,7 +28,7 @@ class Square(object):
 
 # single function to create ALL types of shapes
 def shape_factory(type):
-  	if type == 'circle': return Circle()
+    if type == 'circle': return Circle()
     if type == 'square': return Square()
 ```
 
@@ -38,7 +38,7 @@ def shape_factory(type):
 
 ```python
 class ChessBoard(object):
-  	def __init__(self, rows, columns):
+    def __init__(self, rows, columns):
       	self.board = [[None for _ in range(rows)] for _ in range(columns)]
         self.populate_board()
         
@@ -52,7 +52,7 @@ class ChessBoard(object):
 
 Structural patterns are focused on the composition of classes and objects. We create different interfaces that define methods to be used by another subsystem. Sometimes these classes will be abstract only.
 
-###Facade
+### Facade
 
 As our code becomes more complex, the number of objects grows. To simplify our high level API we create an interface object to expose methods that handle all of the objects in our system. 
 
