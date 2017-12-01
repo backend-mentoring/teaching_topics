@@ -12,4 +12,15 @@
 */
 
 
+function reverseString(str){
+  return str.split('').reduce((reversed, character) => {
+    console.log('reversed', reversed);
+    console.log('character', character);
+    return character + reversed;
+  }, '+')
+}
+
+console.log(reverseString('love'));
+
+console.log(reverseString('tacocat'));
 
