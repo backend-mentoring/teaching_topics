@@ -2,6 +2,8 @@ require 'pry'
 require 'rspec'
 =begin
 
+This one is in Ruby since I felt like only writing tests for one language.
+
 Let's make a class that can be configured with a list of words, and then will return every
 anagram for that word. An anagram is when the letters of one word can be rearranged to create a
 different word.
@@ -17,6 +19,13 @@ anagram_machine.match(lemon)
 # => [melon]
 anagram_machine.match(last)
 # => [salt]
+
+
+Try your code out with pry. When you think you have it, run tests by running:
+
+$ rspec anagrams.rb
+
+Red, green, refactor. 
 
 BONUS round: Initialize your class with the words in /usr/share/dict/words and make sure it still
              works & doesn't have major performance issues.
