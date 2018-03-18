@@ -28,17 +28,7 @@ You have a client that needs some arrays of numbers sorted. This kind of thing s
 
 We are going to declare some tests to define done. and make sure that our sorting algorithm is producing the correct output. 
 
-Let's write the tests first.
-
-Make sure that your system is set up with [Jest](https://facebook.github.io/jest/) installed:
-
-```shell
-% npm i -g jest
-```
-
-As we did last time, we could create an actual package.json and set up npm scripts and all that but this works too. I also like the continual testing with the `—watchAll` option.
-
-Now let's get set up with a skeleton for testing. 
+Let's write the tests first and set up a skeleton for testing. 
 
 ```shell
 % mkdir sorter && cd sorter
